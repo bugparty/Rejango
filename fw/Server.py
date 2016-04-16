@@ -1,13 +1,20 @@
 import http.server
 import socketserver
-
+import fw.Router
 class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
+    def __init__(self, request, client_address, server):
+        self.single_url = fw.Router.SingleUrls()
+        super(MyHTTPRequestHandler,self).__init__(request, client_address, server)
+
     def do_HEAD(self):
         pass
+
     def do_GET(self):
         str = ''
         str+= 'path %s' % self.path
-        self.wfile.write (bytes(str, 'utf-8'))
+        raw_response = self.single_url.distpach('GET', self.path)
+        self.wfile.write (bytes(raw_response, 'utf-8'))
+
     def do_POST(self):
         pass
 
