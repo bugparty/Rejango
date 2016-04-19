@@ -1,11 +1,11 @@
-import fw.EntryLoader
+import fw.entity_loader
 import config
-import fw.Router
-import fw.Server
+import fw.router
+import fw.dev_server
 import socketserver
-module = fw.EntryLoader.load(config.app)
-urls = fw.Router.SingleUrls()
+module = fw.entity_loader.load(config.app)
+urls = fw.router.SingleUrls()
 urls.printUrls()
 PORT = 8081
-httpd = socketserver.TCPServer(("", PORT), fw.Server.MyHTTPRequestHandler)
+httpd = socketserver.TCPServer(("", PORT), fw.dev_server.MyHTTPRequestHandler)
 httpd.serve_forever()

@@ -1,2 +1,2 @@
-import fw.EntryLoader
+import fw.entity_loader
 

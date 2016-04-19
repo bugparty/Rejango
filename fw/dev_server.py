@@ -1,9 +1,9 @@
 import http.server
 import socketserver
-import fw.Router
+import fw.router
 class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, request, client_address, server):
-        self.single_url = fw.Router.SingleUrls()
+        self.single_url = fw.router.SingleUrls()
         super(MyHTTPRequestHandler,self).__init__(request, client_address, server)
 
     def do_HEAD(self):

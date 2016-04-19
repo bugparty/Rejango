@@ -1,4 +1,4 @@
-from fw.Router import *
+from fw.router import *
 @url(r"^/$")
 def index(request):
     return "hello,world,123"

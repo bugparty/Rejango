@@ -14,8 +14,8 @@ class SingleUrls(object):
             cls._instance = orig.__new__(cls, *args, **kwargs)
         return cls._instance
 
-    def add_url(self, url, fn):
-        SingleUrls._urls.append((url, fn))
+    def add_url(self, url,method, fn):
+        SingleUrls._urls.append((url, method, fn))
 
     def printUrls(self):
         print(self._urls)
