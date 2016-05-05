@@ -26,7 +26,7 @@ class SingleUrls(object):
             if result:
                 request = Request()
                 return fn(request)
-        raise NoUrlMatch()
+        raise NoUrlMatch(url)
 
 
 
