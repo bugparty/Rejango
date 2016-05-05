@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="aec2e337-95c4-4f32-90a6-da35959011d8" name="vps3" url="http://weixin1.ifancc.com">
+        <fileTransfer host="vps3.ifancc.com" port="22" privateKey="C:\Users\bowman\.ssh\id_dsa_1024" accessType="SFTP" passphrase="dfccdfd8dfcfdfcfdfcedfc5dfc7" username="root" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
